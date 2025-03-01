@@ -35,7 +35,7 @@ def index():
         text = request.form["text"]  # 입력된 텍스트 가져오기
         wordcloud_img = generate_wordcloud(text)  # 워드 클라우드 생성
 
-    return render_template("index.html", wordcloud_img=wordcloud_img)
+    return render_template("wordCloud.html", wordcloud_img=wordcloud_img)
 
 # 5. 서버 실행
 if __name__ == "__main__":
