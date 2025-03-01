@@ -8,7 +8,7 @@ import base64
 app = Flask(__name__)
 
 # font_path = "AppleGothic.ttf"
-font_path = os.path.join(app.root_path, "static/fonts/NotoSansKR-Regular.ttf")
+font_path = "static/fonts/NotoSansKR-Regular.ttf"
 
 # 1. 워드 클라우드 생성 함수
 def generate_wordcloud(text):
