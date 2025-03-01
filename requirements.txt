@@ -2,4 +2,4 @@ flask
 numpy
 matplotlib
 wordcloud
-gunicorn
+gunicorn  # 프로덕션 배포 시 필수
