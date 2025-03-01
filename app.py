@@ -17,13 +17,14 @@ def generate_wordcloud(text):
 
     # 2. 이미지 데이터를 메모리에 저장
     img_io = io.BytesIO()
+    # plt.rc("font", family="NanumGothic")
     plt.figure(figsize=(10, 5))
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
     plt.savefig(img_io, format="png", bbox_inches="tight")
     plt.close()
     img_io.seek(0)
-    # plt.rc("font", family="NanumGothic")
+
 
     # 3. 이미지 데이터를 Base64로 인코딩하여 HTML에서 표시 가능하도록 변환
     img_base64 = base64.b64encode(img_io.read()).decode("utf-8")
