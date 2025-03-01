@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Word Cloud Generator</title>
+    <style>
+        /* 버튼을 감싸는 div를 오른쪽 정렬 */
+        .button-container {
+            text-align: right;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>워드 클라우드 생성기</h1>
     <form action="/" method="post">
-        <textarea name="text" rows="5" cols="50" placeholder="텍스트를 입력하세요..."></textarea>
-        <br>
-        <button type="submit">워드 클라우드 생성</button>
+        <textarea name="text" rows="10" cols="50" placeholder="텍스트를 입력하세요..."></textarea>
+
+        <!-- 버튼을 감싸는 div 추가 -->
+        <div class="button-container">
+            <button type="submit">워드 클라우드 생성</button>
+        </div>
     </form>
 
     {% if wordcloud_img %}
