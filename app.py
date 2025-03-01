@@ -7,9 +7,12 @@ import base64
 
 app = Flask(__name__)
 
+font_path = "AppleGothic.ttf"
+
 # 1. 워드 클라우드 생성 함수
 def generate_wordcloud(text):
-    wordcloud = WordCloud(width=800, height=400, background_color="white")
+    wordcloud = WordCloud( font_path=font_path,  # 한글 폰트 지정
+                           width=800, height=400, background_color="white")
     wordcloud.generate(text)
 
     # 2. 이미지 데이터를 메모리에 저장
@@ -20,6 +23,7 @@ def generate_wordcloud(text):
     plt.savefig(img_io, format="png", bbox_inches="tight")
     plt.close()
     img_io.seek(0)
+    # plt.rc("font", family="NanumGothic")
 
     # 3. 이미지 데이터를 Base64로 인코딩하여 HTML에서 표시 가능하도록 변환
     img_base64 = base64.b64encode(img_io.read()).decode("utf-8")
