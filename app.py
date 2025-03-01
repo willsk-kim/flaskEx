@@ -17,7 +17,7 @@ def generate_wordcloud(text):
 
     # 2. 이미지 데이터를 메모리에 저장
     img_io = io.BytesIO()
-    # plt.rc("font", family="NanumGothic")
+    # plt.rc("font", family="NanumGothic") &&
     plt.figure(figsize=(10, 5))
     plt.imshow(wordcloud, interpolation="bilinear")
     plt.axis("off")
