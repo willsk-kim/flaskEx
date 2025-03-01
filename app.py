@@ -45,7 +45,7 @@ def index():
 
 # 5. 서버 실행
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
 # if __name__ == "__main__":
 #     from waitress import serve  # gunicorn 대신 안정적인 waitress 사용 가능
 #     serve(app, host="0.0.0.0", port=5000)
