@@ -2,5 +2,3 @@ flask
 numpy
 matplotlib
 wordcloud
-io
-base64
